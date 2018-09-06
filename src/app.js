@@ -15,12 +15,12 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.get('/films', async function (req, res) {
+app.get('/user', async function (req, res) {
     const filmsFiltered = await User.find({}).select('-resume');
     res.send(filmsFiltered)
 });
 
-app.get('/films/:id', async function (req, res) {
+app.get('/user/:id', async function (req, res) {
     let id = req.params.id;
     const movie = await User.findById(parseInt(id))
     if (!movie) {
@@ -30,7 +30,7 @@ app.get('/films/:id', async function (req, res) {
 
 });
 
-app.del('/film/:id', async function (req, res) {
+app.del('/user/:id', async function (req, res) {
     await User.deleteOne({_id: parseInt(req.params.id)});
     res.status(200).send('ok')
 });
