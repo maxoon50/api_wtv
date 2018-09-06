@@ -1,5 +1,6 @@
 const express = require('express');
 import {User} from "./db/user.model";
+
 let bodyParser = require('body-parser');
 const app = express();
 /*const io = socketio(5001);*/
@@ -16,7 +17,10 @@ app.use(function (req, res, next) {
 });
 
 app.get('/user', async function (req, res) {
-    const filmsFiltered = await User.find({}).select('-resume');
+    console.log('oki')
+    const filmsFiltered = await User.find({});
+    console.log(filmsFiltered)
+
     res.send(filmsFiltered)
 });
 
@@ -37,31 +41,14 @@ app.del('/user/:id', async function (req, res) {
 
 
 app.post('/film', async function (req, res) {
-    let errors = [];
-    upload(req, res, async function (err) {
 
-        if (err) {
-            return res.status(500).send({error: err})
-        } else {
+    let toto = new User({
+        name: 'titi',
+    });
+    await toto.save();
+    return res.send(toto);
 
-            let datas = JSON.parse(req.body.datas);
-            datas._id = Date.now().toString();
-            checkErrors(errors, datas, req);
 
-            if (errors.length > 0) {
-                return res.status(400).send({error: 'missing data', errors});
-            } else {
-                    let movie = new User({
-                        img: datas.img,
-                        resume: datas.resume,
-                        _id: datas._id,
-                        titre: datas.titre
-                    });
-                    await movie.save();
-                    return res.send(movie);
-            }
-        }
-    })
 });
 
 //!!! désactivé le file load !!! /

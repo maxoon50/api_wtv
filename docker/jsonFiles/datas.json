@@ -1,0 +1,204 @@
+
+  {
+    "user": {
+      "preferences": {
+        "channels": [
+          {
+            "title": "m6",
+            "img": "logom6.png",
+            "id": 12,
+            "video": "video1.mp4",
+            "sub": "chaine M6 plutot chouette comme chaine televisuelle je confirme"
+          },
+          {
+            "title": "France 2",
+            "img": "france2.jpg",
+            "id": 120,
+            "video": "video1.mp4",
+            "sub": "Ah ben là cest po mal"
+          },
+          {
+            "title": "Arte",
+            "img": "logow9.png",
+            "id": 129,
+            "video": "video1.mp4",
+            "sub": "lol arte avec un logo w9, ça se pauperise venere la teloche"
+          },
+          {
+            "title": "TF1",
+            "img": "TF1.png",
+            "id": 110,
+            "video": "video1.mp4",
+            "sub": "lol arte avec un logo w9, ça se pauperise venere la teloche"
+          },
+          {
+            "title": "RMC",
+            "img": "rmc.png",
+            "id": 132,
+            "video": "video1.mp4",
+            "sub": "lol arte avec un logo w9, ça se pauperise venere la teloche"
+          },
+          {
+            "title": "Arte",
+            "img": "logow9.png",
+            "id": 912,
+            "video": "video1.mp4",
+            "sub": "lol arte avec un logo w9, ça se pauperise venere la teloche"
+          }
+        ],
+        "myContents": [
+          {
+            "title": "Hercule",
+            "img": "hercule.jpg",
+            "id": 12,
+            "video": "video1.mp4",
+            "sub": "lol arte avec un logo w9, ça se pauperise venere la teloche"
+          },
+          {
+            "title": "Julie Lescaut",
+            "img": "julieLescaut.jpg",
+            "id": 126,
+            "video": "video1.mp4",
+            "sub": "lol arte avec un logo w9, ça se pauperise venere la teloche"
+          },
+          {
+            "title": "Hercule",
+            "img": "hercule.jpg",
+            "id": 127,
+            "video": "video1.mp4",
+            "sub": "lol arte avec un logo w9, ça se pauperise venere la teloche"
+          },
+          {
+            "title": "Hercule",
+            "img": "hercule.jpg",
+            "id": 120,
+            "video": "video1.mp4",
+            "sub": "lol arte avec un logo w9, ça se pauperise venere la teloche"
+          },
+          {
+            "title": "Julie Lescaut",
+            "img": "julieLescaut.jpg",
+            "id": 121,
+            "video": "video1.mp4",
+            "sub": "lol arte avec un logo w9, ça se pauperise venere la teloche"
+          },
+          {
+            "title": "Hercule",
+            "img": "hercule.jpg",
+            "id": 112,
+            "video": "video1.mp4",
+            "sub": "lol arte avec un logo w9, ça se pauperise venere la teloche"
+          },
+          {
+            "title": "Hercule",
+            "img": "hercule.jpg",
+            "id": 152,
+            "video": "video1.mp4",
+            "sub": "lol arte avec un logo w9, ça se pauperise venere la teloche"
+          },
+          {
+            "title": "Julie Lescaut",
+            "img": "julieLescaut.jpg",
+            "id": 102,
+            "video": "video1.mp4",
+            "sub": "lol arte avec un logo w9, ça se pauperise venere la teloche"
+          },
+          {
+            "title": "Hercule",
+            "img": "hercule.jpg",
+            "id": 142,
+            "video": "video1.mp4",
+            "sub": "lol arte avec un logo w9, ça se pauperise venere la teloche"
+          }
+        ],
+        "apps": [
+          {
+            "title": "Youtube",
+            "img": "youtube.png",
+            "id": 12,
+            "url": "http://www.youtube.com"
+          },
+          {
+            "title": "Spotify",
+            "img": "spotify.jpg",
+            "id": 120,
+            "url": "http://www.spotify.com"
+          },
+          {
+            "title": "Netflix",
+            "img": "netflix.jpeg",
+            "id": 129,
+            "url": "http://www.neflix.com"
+          },
+          {
+            "title": "Youtube",
+            "img": "youtube.png",
+            "id": 200,
+            "url": "http://www.youtube.com"
+          },
+          {
+            "title": "Spotify",
+            "img": "spotify.jpg",
+            "id": 230,
+            "url": "http://www.spotify.com"
+          },
+          {
+            "title": "Netflix",
+            "img": "netflix.jpeg",
+            "id": 288,
+            "url": "http://www.netflix.com"
+          }
+        ],
+        "films": [
+          {
+            "title": "Daredevil",
+            "img": "daredevil.jpg",
+            "id": 125
+          },
+          {
+            "title": "L\"invasion des profanateurs de sépulture",
+            "img": "invasion.jpg",
+            "id": 124
+          },
+          {
+            "title": "Jackie Brown",
+            "img": "jackie.jpg",
+            "id": 126
+          }
+        ],
+        "extras": [
+          {
+            "title": "M6",
+            "img": "logom6.png",
+            "id": 12
+          },
+          {
+            "title": "France 2",
+            "img": "france2.jpg",
+            "id": 120
+          },
+          {
+            "title": "Arte",
+            "img": "logow9.png",
+            "id": 129
+          },
+          {
+            "title": "TF1",
+            "img": "TF1.png",
+            "id": 110
+          },
+          {
+            "title": "RMC",
+            "img": "rmc.png",
+            "id": 132
+          },
+          {
+            "title": "Arte",
+            "img": "logow9.png",
+            "id": 912
+          }
+        ]
+      },
+      "name": "toto"
+    }
+  }
