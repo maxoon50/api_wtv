@@ -16,14 +16,14 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.get('/user', async function (req, res) {
+// => récupère tous les users
+app.get('/users', async function (req, res) {
     console.log('oki')
     const filmsFiltered = await User.find({});
-    console.log(filmsFiltered)
-
-    res.send(filmsFiltered)
+    res.status(200).send(filmsFiltered)
 });
 
+// => récupère un user via id
 app.get('/user/:id', async function (req, res) {
     let id = req.params.id;
     const movie = await User.findById(parseInt(id))
@@ -34,33 +34,19 @@ app.get('/user/:id', async function (req, res) {
 
 });
 
-app.del('/user/:id', async function (req, res) {
-    await User.deleteOne({_id: parseInt(req.params.id)});
-    res.status(200).send('ok')
-});
-
-
-app.post('/film', async function (req, res) {
+// => update le user
+app.post('/user', async function (req, res) {
 
     let toto = new User({
         name: 'titi',
     });
     await toto.save();
     return res.send(toto);
-
-
 });
 
-//!!! désactivé le file load !!! /
-function checkErrors(errorsArray, datas, req) {
-    /*   if (req.file == null) {
-           errorsArray.push('file');
-       }*/
-    Object.keys(datas).forEach(elt => {
-        if (!datas[elt] || datas[elt].trim().length === 0) {
-            errorsArray.push(elt);
-        }
-    });
-}
+app.del('/user/:id', async function (req, res) {
+    await User.deleteOne({_id: parseInt(req.params.id)});
+    res.status(200).send('ok')
+});
 
 export default app;
