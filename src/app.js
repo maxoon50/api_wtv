@@ -1,5 +1,6 @@
 const express = require('express');
 import {User} from "./db/user.model";
+import {Channel} from "./db/channel.model";
 
 let bodyParser = require('body-parser');
 const app = express();
@@ -16,22 +17,38 @@ app.use(function (req, res, next) {
     next();
 });
 
-// => récupère tous les users
+/*
+* => get all the Users
+ */
 app.get('/users', async function (req, res) {
-    console.log('oki')
-    const filmsFiltered = await User.find({});
-    res.status(200).send(filmsFiltered)
+    const users = await User.find({});
+    if(!users){
+        res.status(204).send('no data found');
+    }
+    res.status(200).send(users)
 });
 
-// => récupère un user via id
+/*
+* Get User with ID
+ */
 app.get('/user/:id', async function (req, res) {
     let id = req.params.id;
     const movie = await User.findById(parseInt(id))
     if (!movie) {
-        res.status(404).send('error');
+        res.status(204).send('no data found');
     }
-    res.send(movie);
+    res.status(200).send(movie);
+});
 
+/**
+ * get all the channels which are proposed on tv
+ */
+app.get('/channels', async function (req, res) {
+    const channels = await Channel.find();
+    if (!channels) {
+        res.status(204).send('no data found');
+    }
+    res.status(200).send(channels);
 });
 
 // => update le user

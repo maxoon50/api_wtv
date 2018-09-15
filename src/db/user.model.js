@@ -1,10 +1,12 @@
 import mongoose, {Schema} from 'mongoose';
+import {Channel} from "./channel.model";
 
 const UserSchema = new Schema({
     user: {
         _id: {type: Number, default: Date.now},
         name: {type: String},
         preferences: {
+            // channels: [{type: mongoose.Schema.Types.ObjectId, ref: Channel}],
             channels: {
                 title: {type: String},
                 img : {type: String},
