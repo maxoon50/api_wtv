@@ -1,11 +1,10 @@
-import mongoose, {Schema} from 'mongoose';
+import  {Schema} from 'mongoose';
 
-const ChannelSchema = new Schema({
-        title: {type: String},
-        img : {type: String},
-        _id: {type: Number, default: Date.now},
-        video : {type: String},
-        sub : {type: String},
+export const Channel = new Schema({
+        title : String,
+        img : String,
+        video : String,
+        sub : String,
 });
 
-export const Channel = mongoose.model('channels', ChannelSchema);
+
