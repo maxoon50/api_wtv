@@ -14,6 +14,7 @@ const UserSchema = new Schema({
             apps: [{type: App}],
             films: [{type: Movie}],
             extras: [{type: Extra}],
+            keywords: [{type : String}]
         }
 });
 

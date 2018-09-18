@@ -19,9 +19,7 @@ app.use(function (req, res, next) {
 
 app.get('/createUser', async function (req, res){
     let user = new User;
-    user.name = "Marlene la zouz";
-    console.log(user.preferences);
-
+    user.name = "Antoine la guez";
 
     // SET CHANNELS
     let channel1 = {};
@@ -144,6 +142,8 @@ app.get('/createUser', async function (req, res){
     user.preferences.extras.push(extra2);
     user.preferences.extras.push(extra3);
     user.preferences.extras.push(extra4);
+
+    user.preferences.keywords.push(...['sailing', 'hockey','horse']);
 
     const userGol = await user.save();
     if(userGol){
