@@ -49,34 +49,63 @@ app.get('/createUser', async function (req, res){
     user.preferences.channels.push(channel3);
     user.preferences.channels.push(channel4);
 
+    let content8 = {};
+    content8.title = 'Gremlins 2';
+    content8.img = "gremlins.png";
+    content8.video = "video1.mp4";
+    content8.sub = "The kind with looting and maybe starting a few fires! I haven't felt much of anything since my guinea pig died. I've got to find a way to escape the horrible ravages of youth. Suddenly, I'm going to the bathroom like clockwork, every three hours...";
+
+    let content7 = {};
+    content7.title = 'Hercule';
+    content7.img = "hercule.jpg";
+    content7.video = "video1.mp4";
+    content7.sub = "The kind with looting and maybe starting a few fires! I haven't felt much of anything since my guinea pig died. I've got to find a way to escape the horrible ravages of youth. Suddenly, I'm going to the bathroom like clockwork, every three hours...";
+
+    let content6 = {};
+    content6.title = 'Navarro';
+    content6.img = "navarro.png";
+    content6.video = "video1.mp4";
+    content6.sub = "The kind with looting and maybe starting a few fires! I haven't felt much of anything since my guinea pig died. I've got to find a way to escape the horrible ravages of youth. Suddenly, I'm going to the bathroom like clockwork, every three hours...";
+
     let content1 = {};
-    content1.title = 'Gremlins 2';
-    content1.img = "hercule.jpg";
+    content1.title = 'Breaking Bad';
+    content1.img = "breakingBad.png";
     content1.video = "video1.mp4";
     content1.sub = "The kind with looting and maybe starting a few fires! I haven't felt much of anything since my guinea pig died. I've got to find a way to escape the horrible ravages of youth. Suddenly, I'm going to the bathroom like clockwork, every three hours...";
 
+    let content5 = {};
+    content5.title = 'Julie Lescaut';
+    content5.img = "julieLescaut.jpg";
+    content5.video = "video1.mp4";
+    content5.sub = "The kind with looting and maybe starting a few fires! I haven't felt much of anything since my guinea pig died. I've got to find a way to escape the horrible ravages of youth. Suddenly, I'm going to the bathroom like clockwork, every three hours...";
+
     let content2 = {};
-    content2.title = 'Toinou contre les merguez';
-    content2.img = "hercule.jpg";
+    content2.title = 'Les convois de l\'extrème';
+    content2.img = "convoisExtreme.png";
     content2.video = "video1.mp4";
     content2.sub = "The kind with looting and maybe starting a few fires! I haven't felt much of anything since my guinea pig died. I've got to find a way to escape the horrible ravages of youth. Suddenly, I'm going to the bathroom like clockwork, every three hours...";
 
+    let content4 = {};
+    content4.title = 'Teleshopping';
+    content4.img = "teleshopping.png";
+    content4.video = "video1.mp4";
+    content4.sub = "The kind with looting and maybe starting a few fires! I haven't felt much of anything since my guinea pig died. I've got to find a way to escape the horrible ravages of youth. Suddenly, I'm going to the bathroom like clockwork, every three hours...";
+
     let content3 = {};
-    content3.title = 'Mad Max Fury Road';
-    content3.img = "hercule.jpg";
+    content3.title = 'Burger Quiz';
+    content3.img = "burgerQuizz.png";
     content3.video = "video1.mp4";
     content3.sub = "The kind with looting and maybe starting a few fires! I haven't felt much of anything since my guinea pig died. I've got to find a way to escape the horrible ravages of youth. Suddenly, I'm going to the bathroom like clockwork, every three hours...";
 
-    let content4 = {};
-    content4.title = 'Starship troopers';
-    content4.img = "julieLescaut.jpg";
-    content4.video = "video1.mp4";
-    content4.sub = "The kind with looting and maybe starting a few fires! I haven't felt much of anything since my guinea pig died. I've got to find a way to escape the horrible ravages of youth. Suddenly, I'm going to the bathroom like clockwork, every three hours...";
 
     user.preferences.myContents.push(content1);
     user.preferences.myContents.push(content2);
     user.preferences.myContents.push(content3);
     user.preferences.myContents.push(content4);
+    user.preferences.myContents.push(content5);
+    user.preferences.myContents.push(content6);
+    user.preferences.myContents.push(content7);
+    user.preferences.myContents.push(content8);
 
     let app1 = {};
     app1.title = "Tinder";
@@ -171,6 +200,16 @@ app.get('/user/:name', async function (req, res) {
     if (!user) {
         res.status(204).send('no data found');
     }
+    res.status(200).send(user);
+});
+
+/*
+* Get User with ID
+ */
+app.post('/update', async function (req, res) {
+    const user = await User.findOneAndUpdate({ name: req.body.name }, req.body, {new: true}, function(err){
+        if(err){ res.status(500).send()}
+    });
     res.status(200).send(user);
 });
 
