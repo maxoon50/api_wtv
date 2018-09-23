@@ -178,24 +178,28 @@ app.get('/createUser', async function (req, res){
     user.preferences.myContents.push(content8);
 
     let app1 = {};
-    app1.title = "Tinder";
+    app1.id = 124;
+    app1.title = "Netflix";
     app1.img = "netflix.jpeg";
     app1.url = "http://www.netflix.com";
 
     let app2 = {};
-    app2.title = "Netflix";
-    app2.img = "netflix.jpeg";
-    app2.url = "http://www.netflix.com";
+    app2.id = 14;
+    app2.title = "YouTube";
+    app2.img = "youtube.png";
+    app2.url = "http://www.youtube.com";
 
     let app3 = {};
-    app3.title = "Nutsflix";
-    app3.img = "netflix.jpeg";
-    app3.url = "http://www.netflix.com";
+    app3.id = 90;
+    app3.title = "HBO Go";
+    app3.img = "hboGo.png";
+    app3.url = "http://www.hbo.com";
 
     let app4 = {};
-    app4.title = "Google Map";
-    app4.img = "netflix.jpeg";
-    app4.url = "http://www.netflix.com";
+    app4.id = 129;
+    app4.title = "Twitch";
+    app4.img = "twitch.png";
+    app4.url = "http://www.twitch.com";
 
     user.preferences.apps.push(app1);
     user.preferences.apps.push(app2);
