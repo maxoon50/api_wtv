@@ -1,4 +1,5 @@
 import {ChannelModal} from "./db/channelModal.model";
+import {AppsModal} from "./db/appsModal.model";
 const express = require('express');
 import {User} from "./db/user.model";
 let bodyParser = require('body-parser');
@@ -13,6 +14,75 @@ app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT, DELETE');
     res.header("Access-Control-Allow-Headers", "Content-Type");
     next();
+});
+
+/*
+* => get all the Users
+ */
+app.get('/users', async function (req, res) {
+    const users = await User.find({});
+    if (!users) {
+        res.status(204).send('no data found');
+    }
+    res.status(200).send(users)
+});
+
+/*
+* Get User with ID
+ */
+app.get('/user/:name', async function (req, res) {
+    const user = await User.findOne({ name : req.params.name });
+    if (!user) {
+        res.status(204).send('no data found');
+    }
+    res.status(200).send(user);
+});
+
+/*
+* Get User with ID
+ */
+app.post('/update', async function (req, res) {
+    const user = await User.findOneAndUpdate({ name: req.body.name }, req.body, {new: true}, function(err){
+        if(err){ res.status(500).send()}
+    });
+    res.status(200).send(user);
+});
+
+/**
+ * get all the channels which are proposed on tv
+ */
+app.get('/channels', async function (req, res) {
+    const channels = await ChannelModal.find();
+    if (!channels) {
+        res.status(204).send('no data found');
+    }
+    res.status(200).send(channels);
+});
+
+/**
+ * get all the apps which are proposed on tv
+ */
+app.get('/apps', async function (req, res) {
+    const apps = await AppsModal.find();
+    if (!apps) {
+        res.status(204).send('no data found');
+    }
+    res.status(200).send(apps);
+});
+
+// => update le user
+app.post('/user', async function (req, res) {
+
+    let toto = new User({
+        name: 'titi',
+    });
+    await toto.save();
+    return res.send(toto);
+});
+
+app.del('/user/:id', async function (req, res) {
+    await User.deleteOne({_id: parseInt(req.params.id)});
+    res.status(200).send('ok')
 });
 
 
@@ -176,67 +246,12 @@ app.get('/createUser', async function (req, res){
 
     const userGol = await user.save();
     if(userGol){
-       res.status(200).send(userGol);
+        res.status(200).send(userGol);
     }else{
         res.status(500).send('error');
     }
 });
-/*
-* => get all the Users
- */
-app.get('/users', async function (req, res) {
-    const users = await User.find({});
-    if (!users) {
-        res.status(204).send('no data found');
-    }
-    res.status(200).send(users)
-});
 
-/*
-* Get User with ID
- */
-app.get('/user/:name', async function (req, res) {
-    const user = await User.findOne({ name : req.params.name });
-    if (!user) {
-        res.status(204).send('no data found');
-    }
-    res.status(200).send(user);
-});
 
-/*
-* Get User with ID
- */
-app.post('/update', async function (req, res) {
-    const user = await User.findOneAndUpdate({ name: req.body.name }, req.body, {new: true}, function(err){
-        if(err){ res.status(500).send()}
-    });
-    res.status(200).send(user);
-});
-
-/**
- * get all the channels which are proposed on tv
- */
-app.get('/channels', async function (req, res) {
-    const channels = await ChannelModal.find();
-    if (!channels) {
-        res.status(204).send('no data found');
-    }
-    res.status(200).send(channels);
-});
-
-// => update le user
-app.post('/user', async function (req, res) {
-
-    let toto = new User({
-        name: 'titi',
-    });
-    await toto.save();
-    return res.send(toto);
-});
-
-app.del('/user/:id', async function (req, res) {
-    await User.deleteOne({_id: parseInt(req.params.id)});
-    res.status(200).send('ok')
-});
 
 export default app;
