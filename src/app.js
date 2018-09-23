@@ -93,13 +93,13 @@ app.get('/createUser', async function (req, res){
 
     // SET CHANNELS
     let channel1 = {};
-    channel1.title = 'Canal+';
-    channel1.img = "canal+Logo.png";
+    channel1.title = 'France 2';
+    channel1.img = "france2Logo.png";
     channel1.video = "video1.mp4";
     channel1.sub = "The kind with looting and maybe starting a few fires! I haven't felt much of anything since my guinea pig died. I've got to find a way to escape the horrible ravages of youth. Suddenly, I'm going to the bathroom like clockwork, every three hours";
     let channel2 = {};
-    channel2.title = 'CStar';
-    channel2.img = "cstarLogo.png";
+    channel2.title = 'M6';
+    channel2.img = "m6Logo.png";
     channel2.video = "video1.mp4";
     channel2.sub = "The kind with looting and maybe starting a few fires! I haven't felt much of anything since my guinea pig died. I've got to find a way to escape the horrible ravages of youth. Suddenly, I'm going to the bathroom like clockwork, every three hours.";
     let channel3 = {};
