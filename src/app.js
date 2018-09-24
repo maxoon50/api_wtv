@@ -207,19 +207,22 @@ app.get('/createUser', async function (req, res){
     user.preferences.apps.push(app4);
 
     let film1 ={};
-    film1.title = "l'arme fatale";
+    film1.title = "Jackie Brown";
     film1.img = "jackie.jpg";
     film1.url = "null";
+    film1.videoId = "QlqM2oiD19w";
 
     let film2 = {};
     film2.title = "L'invasion des profanateurs de sépulture";
     film2.img = "invasion.jpg";
     film2.url = "null";
+    film2.videoId = "0BLt7yDaHdQ";
 
     let film3 = {};
     film3.title = "Daredevil";
     film3.img = "daredevil.jpg";
     film3.url = "null";
+    film3.videoId = "mGEWftxFX3M";
 
     user.preferences.films.push(film1);
     user.preferences.films.push(film2);

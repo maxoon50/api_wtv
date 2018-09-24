@@ -345,56 +345,56 @@
   "title": "Netflix",
   "img": "netflix.jpeg",
   "id": 120,
-  "url": "http://www.netflix.com",
+  "url": "http://www.netflix.com"
   },
   {
   "title": "Spotify",
   "img": "spotify.jpg",
   "id": 121,
-  "url": "http://www.netflix.com",
+  "url": "http://www.netflix.com"
   },
   {
   "title": "YouTube",
   "img": "youtube.png",
   "id": 122,
-  "url": "http://www.youtube.com",
+  "url": "http://www.youtube.com"
   },
   {
   "title": "TuneIn",
   "img": "tunein.png",
   "id": 124,
-  "url": "http://www.netflix.com",
+  "url": "http://www.netflix.com"
   },
   {
   "title": "Twitch",
   "img": "twitch.png",
   "id": 125,
-  "url": "http://www.twitch.com",
+  "url": "http://www.twitch.com"
   },
   {
   "title": "HBO Go",
   "img": "hboGo.png",
   "id": 129,
-  "url": "http://www.hbo.com",
+  "url": "http://www.hbo.com"
   },
   {
   "title": "Gaming TV",
   "img": "gamingTv.png",
   "id": 112,
-  "url": "http://www.netflix.com",
+  "url": "http://www.netflix.com"
   },
   {
   "title": "Deezer",
   "img": "deezer.png",
   "id": 102,
-  "url": "http://www.deezer.com",
+  "url": "http://www.deezer.com"
   },
   {
   "title": "Plex",
   "img": "plex.png",
   "id": 192,
-  "url": "http://www.plex.com",
-  },
+  "url": "http://www.plex.com"
+  }
 
   ]
   }
