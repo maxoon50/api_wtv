@@ -228,7 +228,7 @@ app.get('/createUser', async function (req, res){
     user.preferences.films.push(film2);
     user.preferences.films.push(film3);
 
-    let extra1 = {};
+/*    let extra1 = {};
     extra1.title = "extra1";
     extra1.img ="hercule.jpg";
 
@@ -247,7 +247,7 @@ app.get('/createUser', async function (req, res){
     user.preferences.extras.push(extra1);
     user.preferences.extras.push(extra2);
     user.preferences.extras.push(extra3);
-    user.preferences.extras.push(extra4);
+    user.preferences.extras.push(extra4);*/
 
     user.preferences.keywords.push(...['sailing', 'hockey','horse']);
 
